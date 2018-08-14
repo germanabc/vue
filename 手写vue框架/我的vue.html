@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的vue</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //   在JavaScript中，对象的属性分为可枚举和不可枚举之分，
+    //   它们是由属性的enumerable值决定的。可枚举性决定了这个属性能否被for…in,Object.keys(),JSON.stringify查找遍历到
+    //   js中基本包装类型的原型属性是不可枚举的，如Object, Array, Number
+
+    var a={ }
+    Object.defineProperty(a, 'b', {
+      
+        value: 1
+       
+    })
+    console.log(a)
+    // a.b=1;
+    // console.log(a.b)
+
+    // var obj = {};
+    // var descriptor = Object.create(null); // 没有继承的属性
+    // // 默认没有 enumerable，没有 configurable，没有 writable
+    // descriptor.value = 'static';
+    // Object.defineProperty(obj, 'key', descriptor);
+</script>
+
+</html>

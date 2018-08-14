@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue原理</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{title}}</h1>
+        <h2 @click="add">{{title2}}</h2>
+    </div>
+    <!-- FBI WARNING -->
+    <!-- 大家只学思路就好，这不是真的代码！ -->
+    <!-- 大家只学思路就好，这不是真的代码！ -->
+    <!-- 大家只学思路就好，这不是真的代码！ -->
+    <!-- 熟悉我这个思路之后可以让你有个基础,拿这个思路去看源码,不会这么一脸懵逼 -->
+
+</body>
+<script src="./vue.js"></script>
+
+<script>
+    new Vue({
+        el: '#app',
+        data() {
+            return {
+                num: 0,
+                title: 'Hello World',
+                title2: 222
+            }
+        },
+        watch: {
+            num(val, oldVal) {
+                console.log(val, oldVal)
+            }
+        },
+        methods: {
+            add() {
+                this.num++
+                    this.title = `Hello Vue${this.num}`
+            }
+        }
+    })
+</script>
+
+</html>
